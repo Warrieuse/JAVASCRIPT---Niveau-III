@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+<body>
+    <fieldset> <!--Entoure la demande visuellement-->
+        <legend>Quel est votre age ?</legend>
+        <label for="age_user">Entrez votre age : </label>
+        <input type="number" id="ageUser" name="age" min="1" max="120" step="1" pattern="\d+"
+            required aria-label="enter your age"><!--aria-label : légende non-vivible alternative textuel pour personnes malvoyantes-->
+        </input>
+        <!--demande faite avec input number avec conditions comme ca user ne pourras pas inscrire autre chose qu'un nombre. -->
+        <button onclick="fUserAgeValidation()">Envoyé</button>
+    </fieldset>
+<!-- lien fichier JS -->
+<script src="main.js"></script>    
+</body>
+</html>
