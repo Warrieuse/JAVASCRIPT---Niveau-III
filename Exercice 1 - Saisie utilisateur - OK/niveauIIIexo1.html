@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Niveau 3 exercice 1</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        button{
+            margin: 50px 50%;;
+        }
+    </style>
+</head>
+<body>
+    <!--# Objectif
+Interaction utilisateur via les boites de dialogue alert, confirm et prompt.
+
+# Énoncé 
+Créer un document html qui contient 2 boutons.
+
+# Consignes
+1)Ecrire un script qui affiche le message "Hello World" après le clic sur le premier bouton.
+2) Lors du clic sur le  deuxième bouton  demander à l'utilisateur de saisir son nom. Demander ensuite 
+une confirmation du nom de l'utilisateur. Si le nom est confirmé, afficher ce dernier dans une boîte 
+de dialogue.
+Exemple d’exécution :
+Voir les 3 screenshots présents dans l'archive.
+    -->   
+
+    <button><a href="#" id="hello">Bonjour</a></button>
+    <button><a href="#" id="name">cliquez-moi</a></button>
+
+    <script type="text/javascript">
+        // je crée mes variables et je récupère mes boutons
+        let vHello_button = document.getElementById("hello");
+        let vName_button = document.getElementById("name");
+
+        //Je fais la liaisons entre mes boutons et mes functions
+
+        vHello_button.addEventListener('click',fbonjour);
+        vName_button.addEventListener('click', fname)
+
+        // je crée mes functions
+        function fbonjour(){
+            alert("Hello World");
+        }
+
+        function fname() {
+
+            let vName = prompt("Veuillez Comment vous appelez-vous ?", "Obiwan KENOBI");
+
+            if (vName == "")  {//si on ne repond pas
+                vName = alert("Vous n'avez pas répondu à ma question ... ")
+            }  else  //sinon
+                if (confirm("Vous vous appelez vraiment " + vName) == true)  {
+                    alert("Bonjour " + vName) 
+                }  else  {
+                    alert("Bon OK, vous reviendrez lorsque vous saurez qui vous êtes ....")
+                }
+          
+        }
+         
+    </script>
+</body>
+</html>
