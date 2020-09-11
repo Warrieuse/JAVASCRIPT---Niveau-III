@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 8</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Afficher le nombre de jours nous séparant d'une date spécifique.</h1>
+        <h3>Enoncé</h3>
+        <div>
+            <p>On affiche le nombre de jours nous séparant d'une date spécifique - votre anniversaire. Quatre étapes sont nécessaires pour y arriver.</p>
+            <p>Il faut:</p>     
+            <ol>
+                <li>créer une variable de type Date correspondant au moment actuel</li>
+                <li>créer une variable de type Date correspondant à la deuxième date (votre anniversaire)</li>
+                <li>compter le nombre de jours séparant les deux dates</li>
+                <li>afficher le résultat dans la page HTML</li>
+            </ol>
+            <span>JavaScript possède un object de type Date, sur lequel on peut récupérer le temps. La méthode "getTime" récupére le temps en millisecondes. Pour calculer le nombre de jours séparant 2 événements, il faut transformer le nombre de millisecondes (que nous retournera JavaScript) en jours.</span>
+        </div>
+    </header>
+    <main>
+        <h3>Exercice.</h3>
+        <p id="timetoday"></p>
+        <label for="buttonbirthday">Votre date d'anniversaire :</label>
+        <input type="date" value="2021-08-26" id="buttonbirthday" required>
+        <input type="submit" onclick="fDAyRemmaining()"><!--BTN envoyé-->
+        <p id="Birthdayuser"></p>
+
+        <h4 id="days_before_birthday"></h4>
+    </main>
+
+    
+    
+<!--Lien Javascript-->
+<script src="main.js"></script>
+</body>
+</html>
