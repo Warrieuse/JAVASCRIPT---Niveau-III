@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 9  - Read More</title>
+    <style>
+        h3, legend {text-transform: capitalize;}
+        img{border: 1px solid black; }
+        p:only-child{display: none;}
+        main > div:nth-child(2n+1){display: block;} 
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Afficher un bouton "Lire plus" permettant d'afficher un contenu d'abord masqué.</h1>    
+        <div id="enonceexercice9">
+            <h3>énoncé</h3>
+            <ul>
+                <li>1) Créer un document HTML contenant une première div qui contiendra la version courte du texte, dans notre cas simplement "Lorem ipsum ..." (chercher sur google un générateur de "lorem ipsum")</li>
+                <li>2) Ajouter ensuite un bouton "Lire plus"</li>
+                <li>3) Ajouter une seconde div contenant l'intégralité du texte "Lorem ipsum" (Si vous utiulisez Sublime Text essayez "lorem"+tab). Cette div sera masquée à l'ouverture de la page ! (propriété css display:none)</li>
+                <li>4) Lorsque l'utilisateur clique sur "Lire plus", la première div (texte court) disparait, de même que le bouton "Lire plus" et c'est la seconde div, le texte long qui s'affiche. Vous devez donc gérer les modifier de propriété css de ces éléments.</li>
+            </ul>
+        </div>
+        <div id="resultatexercice9">
+            <legend>resultat attendu avant de cliqué</legend>
+            <img src="resultat1.png" alt="photo du resultat attendu avant de cliqué">
+            <legend>resultat attendu après avoir cliqué</legend>
+            <img src="resultat2.png" alt="photo du resultat attendu après avoir cliqué">
+        </div>
+    </header>
+
+    <main>
+        <h3>Exercice</h3>
+
+            <div id="div_short">
+                <p>Lorem ipsum...</p>
+                <input id ="button" type="button" value="Lire plus" onclick="fReadMore()">
+            </div>
+            
+            <div>
+                <p id="div_More">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+                Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
+            
+                Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+            </div>
+    </main>
+<!--LIEN JAVASCRIPT-->
+<script src="main.js"></script>    
+</body>
+</html>
